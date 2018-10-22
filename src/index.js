@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 
 import Root from 'view/components/Root';
 import configureStore from 'state/configureStore';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 let users = localStorage.getItem('users');
 
