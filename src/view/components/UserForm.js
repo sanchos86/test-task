@@ -8,18 +8,10 @@ import validate from 'utils/validate';
 
 const UserForm = ({ handleSubmit }) => (
   <>
-    <h1 className="text-center mt-4">Add User</h1>
+    <h3 className="text-center mt-4">Add User</h3>
     <Form onSubmit={handleSubmit} className="my-4">
-      <Field
-        type="text"
-        name="name"
-        component={InputField}
-      />
-      <Field
-        type="email"
-        name="email"
-        component={InputField}
-      />
+      <Field type="text" name="name" component={InputField} />
+      <Field type="email" name="email" component={InputField} />
       <FormGroup>
         <Button type="submit" color="info">
           Add User
@@ -30,7 +22,7 @@ const UserForm = ({ handleSubmit }) => (
 );
 
 UserForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
 
 export default reduxForm({

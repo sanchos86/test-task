@@ -7,10 +7,11 @@ const users = (state = List(), action) => {
 
   switch (type) {
     case types.ADD_USER:
+      const user = payload.user;
       return state.push(Map({
         id: uuid(),
-        name: payload.name,
-        email: payload.email,
+        name: user.get('name'),
+        email: user.get('email'),
       }));
     case types.DELETE_USER:
       return state.filter(user => user.get('id') !== payload.id);
