@@ -13,6 +13,7 @@
     "react-scripts": "2.0.5",
     "reactstrap": "^6.5.0",
     "redux": "^4.0.1",
+    "redux-form": "^7.4.2",
     "redux-immutable": "^4.0.0",
     "transit-immutable-js": "^0.7.0",
     "transit-js": "^0.8.861",
@@ -35,5 +36,8 @@
   ],
   "devDependencies": {
     "prop-types": "^15.6.2"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

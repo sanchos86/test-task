@@ -3,7 +3,7 @@ import { Map, List } from 'immutable';
 
 import rootReducer from './modules';
 
-const configureStore = (preloadedState = null) => {
+const configureStore = (preloadedState) => {
   if (preloadedState && List.isList(preloadedState)) {
     return createStore(
       rootReducer,
