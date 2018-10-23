@@ -22,10 +22,10 @@ const UserForm = ({ handleSubmit }) => (
 );
 
 UserForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default reduxForm({
   form: 'UserForm',
-  validate
+  validate,
 })(UserForm);

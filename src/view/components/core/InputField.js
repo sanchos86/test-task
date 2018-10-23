@@ -19,7 +19,7 @@ const InputField = ({ input, type, name, meta: { touched, error } }) => (
 );
 
 InputField.propTypes = {
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
 };
 
 export default InputField;

@@ -41,6 +41,5 @@ export const storageActions = {
     } else {
       localStorage.removeItem('users');
     }
-  }
+  },
 };
-

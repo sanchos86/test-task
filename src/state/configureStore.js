@@ -4,7 +4,6 @@ import { Map, List } from 'immutable';
 import rootReducer from './modules';
 
 const configureStore = (preloadedState) => {
-  console.log(List.isList(preloadedState));
   if (preloadedState && List.isList(preloadedState)) {
     return createStore(
       rootReducer,

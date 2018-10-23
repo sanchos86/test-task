@@ -5,7 +5,7 @@ import {
   NavbarToggler,
   Collapse,
   Nav,
-  NavItem
+  NavItem,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -13,11 +13,11 @@ import routes from 'utils/routes';
 
 class NavBar extends React.Component {
   state = {
-    isOpen: false
+    isOpen: false,
   };
   toggleNavBar = () => {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   };
   render() {

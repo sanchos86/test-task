@@ -2,12 +2,20 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
 import { reset } from 'redux-form';
+import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import { userActions } from 'state/modules/users';
 import UserForm from 'view/components/UserForm';
 import UsersList from 'view/components/UsersList';
 
 class UsersPage extends React.Component {
+  static propTypes = {
+    users: ImmutablePropTypes.list.isRequired,
+    addUser: PropTypes.func.isRequired,
+    deleteUser: PropTypes.func.isRequired,
+    reset: PropTypes.func.isRequired,
+  };
   handleSubmit = values => {
     const { reset, addUser } = this.props;
     addUser(values);

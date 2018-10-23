@@ -6,7 +6,7 @@ import ImmutablePropTypes from 'react-immutable-proptypes';
 class UserItem extends React.Component {
   static propTypes = {
     user: ImmutablePropTypes.map.isRequired,
-    deleteUser: PropTypes.func.isRequired
+    deleteUser: PropTypes.func.isRequired,
   };
   shouldComponentUpdate(nextProps) {
     return !this.props.user.equals(nextProps.users);

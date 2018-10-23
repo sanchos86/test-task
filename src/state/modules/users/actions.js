@@ -9,8 +9,8 @@ const addUser = (user) => {
   return {
     type: types.ADD_USER,
     payload: {
-      user: userItem
-    }
+      user: userItem,
+    },
   };
 };
 
@@ -19,12 +19,12 @@ const deleteUser = (id) => {
   return {
     type: types.DELETE_USER,
     payload: {
-      id
-    }
+      id,
+    },
   };
 };
 
 export default {
   addUser,
-  deleteUser
+  deleteUser,
 };

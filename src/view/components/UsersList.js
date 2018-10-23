@@ -22,7 +22,7 @@ const UsersList = ({ users, deleteUser }) => (
 
 UsersList.propTypes = {
   users: ImmutablePropTypes.list.isRequired,
-  deleteUser: PropTypes.func.isRequired
+  deleteUser: PropTypes.func.isRequired,
 };
 
 export default UsersList;

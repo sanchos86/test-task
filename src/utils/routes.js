@@ -13,13 +13,13 @@ const routes = [
     name: 'Users',
     component: UsersPage,
     exact: false,
-    path: '/users'
+    path: '/users',
   },
   {
     name: 'NotFoundPage',
     component: NotFoundPage,
     exact: false,
-    path: '*'
+    path: '*',
   },
 ];
 
