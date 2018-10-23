@@ -1,11 +1,13 @@
 import { createStore } from 'redux';
+import { Map, List } from 'immutable';
+
 import rootReducer from './modules';
 
 const configureStore = (preloadedState = null) => {
-  if (preloadedState) {
+  if (preloadedState && List.isList(preloadedState)) {
     return createStore(
       rootReducer,
-      {users: preloadedState},
+      Map({users: preloadedState}),
       window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     );
   }

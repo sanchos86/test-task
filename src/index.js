@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import transit from 'transit-immutable-js';
 
 import Root from 'view/components/Root';
 import configureStore from 'state/configureStore';
@@ -9,7 +10,7 @@ let users = localStorage.getItem('users');
 
 if (users) {
   try {
-    users = JSON.parse(users);
+    users = transit.fromJSON(users);
   } catch (e) {
     users = null;
     console.error('Users from local storage can`t be parsed');
