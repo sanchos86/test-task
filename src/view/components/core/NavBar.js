@@ -27,18 +27,16 @@ class NavBar extends React.Component {
           <NavbarToggler onClick={this.toggleNavBar} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar className="mr-auto">
-              {
-                routes.map((route, index) => {
-                  const { path, name } = route;
-                  return (
-                    (routes.length - 1 !== index) ? (
-                      <NavItem key={path}>
-                        <NavLink exact={true} className="nav-link" to={path}>{name}</NavLink>
-                      </NavItem>
-                    ) : (null)
-                  );
-                })
-              }
+              {routes.map((route, index) => {
+                const { path, name } = route;
+                return (routes.length - 1 !== index) ? (
+                  <NavItem key={path}>
+                    <NavLink exact={true} className="nav-link" to={path}>
+                      {name}
+                    </NavLink>
+                  </NavItem>
+                ) : null;
+              })}
             </Nav>
           </Collapse>
         </Container>

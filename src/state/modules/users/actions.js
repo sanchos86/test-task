@@ -1,18 +1,28 @@
 import types from './types';
+import uuid from 'uuid/v1';
 
-const addUser = (user) => ({
-  type: types.ADD_USER,
-  payload: {
-    user
-  }
-});
+import { storageActions } from 'utils/helpers';
 
-const deleteUser = (id) => ({
-  type: types.DELETE_USER,
-  payload: {
-    id
-  }
-});
+const addUser = (user) => {
+  const userItem = user.set('id', uuid());
+  storageActions.addToStorage(userItem);
+  return {
+    type: types.ADD_USER,
+    payload: {
+      user: userItem
+    }
+  };
+};
+
+const deleteUser = (id) => {
+  storageActions.deleteFromStorage(id);
+  return {
+    type: types.DELETE_USER,
+    payload: {
+      id
+    }
+  };
+};
 
 export default {
   addUser,
