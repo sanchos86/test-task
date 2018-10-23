@@ -28,12 +28,14 @@ class NavBar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar className="mr-auto">
               {
-                routes.map(route => {
+                routes.map((route, index) => {
                   const { path, name } = route;
                   return (
-                    <NavItem key={path}>
-                      <NavLink exact={true} className="nav-link" to={path}>{name}</NavLink>
-                    </NavItem>
+                    (routes.length - 1 !== index) ? (
+                      <NavItem key={path}>
+                        <NavLink exact={true} className="nav-link" to={path}>{name}</NavLink>
+                      </NavItem>
+                    ) : (null)
                   );
                 })
               }

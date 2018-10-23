@@ -1,5 +1,6 @@
 import MainPage from 'view/pages/MainPage';
 import UsersPage from 'view/pages/UsersPage';
+import NotFoundPage from 'view/pages/NotFoundPage';
 
 const routes = [
   {
@@ -13,6 +14,12 @@ const routes = [
     component: UsersPage,
     exact: false,
     path: '/users'
+  },
+  {
+    name: 'NotFoundPage',
+    component: NotFoundPage,
+    exact: false,
+    path: '*'
   },
 ];
 
