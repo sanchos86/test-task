@@ -27,11 +27,19 @@ export const storageActions = {
 
     return users;
   },
+  /**
+   * Add user to local storage
+   * @param {Map} user
+   */
   addToStorage(user) {
     let users = this.parseStorage();
-    users = users.push(Map(user));
+    users = users.push(user);
     localStorage.setItem('users', transit.toJSON(users));
   },
+  /**
+   * Delete user from local storage
+   * @param {string} id - id of user to be deleted
+   */
   deleteFromStorage(id) {
     let users = this.parseStorage();
     users = users.filter(user => user.get('id') !== id);
