@@ -1,5 +1,5 @@
 import transit from 'transit-immutable-js';
-import { Map, List } from 'immutable';
+import { List } from 'immutable';
 
 export const ucFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 

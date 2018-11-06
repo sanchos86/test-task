@@ -1,6 +1,8 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Map, List } from 'immutable';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
+import storageMiddleware from 'middlewares/storageMiddleware';
 import rootReducer from './modules';
 
 const configureStore = (preloadedState) => {
@@ -8,12 +10,20 @@ const configureStore = (preloadedState) => {
     return createStore(
       rootReducer,
       Map({users: preloadedState}),
-      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+      composeWithDevTools(
+        applyMiddleware(
+          storageMiddleware
+        )
+      )
     );
   }
   return createStore(
     rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeWithDevTools(
+      applyMiddleware(
+        storageMiddleware
+      )
+    )
   );
 };
 

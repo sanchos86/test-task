@@ -33,7 +33,10 @@
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
-      "comma-dangle": ["error", "always-multiline"]
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ]
     }
   },
   "browserslist": [
@@ -43,7 +46,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "redux-devtools-extension": "^2.13.5"
   },
   "prettier": {
     "singleQuote": true
