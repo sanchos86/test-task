@@ -26,7 +26,7 @@ class UsersPage extends React.Component {
     return (
       <Container>
         <Row className="justify-content-center">
-          <Col xs={6}>
+          <Col sm={12} lg={8} xl={6}>
             <UserForm onSubmit={this.handleSubmit} />
             <UsersList users={users} deleteUser={deleteUser} />
           </Col>
